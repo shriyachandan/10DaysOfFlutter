@@ -1,4 +1,4 @@
-# flutter_catalog
+# Techmart
 
 A new Flutter project.
 
