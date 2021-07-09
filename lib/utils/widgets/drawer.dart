@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/cupertino/icons.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final imageUrl = "";
+    final imageUrl =
+        "https://media-exp1.licdn.com/dms/image/C4E03AQENwDW0ffsyZg/profile-displayphoto-shrink_200_200/0/1625415389790?e=1631145600&v=beta&t=737oBrUmFy3BQWcsbFJQn2vReYzLWEC-GOebdPAuUrY";
     return Drawer(
       child: Container(
         color: Colors.indigo,
@@ -17,12 +16,15 @@ class MyDrawer extends StatelessWidget {
                 // margin: EdgeInsets.zero,
                 accountName: Text("Shriya Chandan"),
                 accountEmail: Text("chandanshriya7@gmail.com"),
-                currentAccountPicture: Image.network(imageUrl),
+                currentAccountPicture: ClipRRect(
+                  child: Image.network(imageUrl),
+                  borderRadius: BorderRadius.circular(50),
+                ),
               ),
             ),
             ListTile(
               leading: Icon(
-                CupertinoIcons.home,
+                Icons.home,
                 color: Colors.white,
               ),
               title: Text(
@@ -35,7 +37,7 @@ class MyDrawer extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(
-                CupertinoIcons.profile_circled,
+                Icons.account_circle,
                 color: Colors.white,
               ),
               title: Text(
@@ -48,7 +50,7 @@ class MyDrawer extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(
-                CupertinoIcons.mail,
+                Icons.mail,
                 color: Colors.white,
               ),
               title: Text(
